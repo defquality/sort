@@ -1,21 +1,20 @@
 def sort(scroll, canon):
-    list_result = []
+    first = []
+    second = []
+    third = []
     for i in scroll:
-        while i == canon[0]:
-            list_result.append(canon[0])
-            print(list_result)
-            break
-        while i == canon[1]:
-            list_result.append(canon[1])
-            print(list_result)
-            break
-        while i == canon[2]:
-            list_result.append(canon[2])
-            print(list_result)
-            break
+        if i == canon[0]:
+            first.append(canon[0])
+    for i in scroll:
+        if i == canon[1]:
+            second.append(canon[1])
+    for i in scroll:
+        if i == canon[2]:
+            third.append(canon[2])
+    list_result = first + second + third
     return list_result
 
 
 inbox_data = list('ССЗСКЗЗЗККСЗССКЗ')
-rule = list('ЗСК')
+rule = list('СКЗ')
 print(sort(inbox_data, rule))
